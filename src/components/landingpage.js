@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Grid, Cell, } from 'react-mdl';
+import { Grid, Cell, Link } from 'react-mdl';
+import {Animated} from "react-animated-css";
 
 
 class Landing extends Component {
@@ -8,17 +9,20 @@ class Landing extends Component {
             <div style={{width: '100%', margin: 'auto'}}>
                 <Grid className="landing-grid">
                     <Cell col={12}>
-                    
+                   
                         <img
                         src="https://icon-library.com/images/avatar-icon-images/avatar-icon-images-4.jpg"
                         alt="avatar"
                         className="avatar-img"
                         />
-
                         <div className="banner-text">
-                            <h1>Front End Web Developer</h1>
-                            <hr/>
-                            <p>HTML/CSS | JavaScript | React | Angular</p>
+                        <Animated animationIn="fadeIn" animationOut="fadeOut" animationInDuration={1000} animationOutDuration={1000} isVisible={true}>
+                            <h1>Front end web developer</h1>
+                            </Animated>
+
+                            <hr/>   
+                            <p>HTML/CSS | JavaScript | React</p>
+                            <Animated animationIn="bounceInUp" animationOut="slideOutDown" animationInDuration={1000} animationOutDuration={1000} isVisible={true}>
                             <div className="social-links">
 
                                 {/* LinkedIn */}
@@ -37,6 +41,7 @@ class Landing extends Component {
                                 </a>
 
                             </div>
+                        </Animated>
                         </div>
                     </Cell>
                 </Grid>

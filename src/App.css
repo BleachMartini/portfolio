@@ -19,7 +19,6 @@ background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, F
     background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
-
     text-align: center;
     position: fixed;
     top: 0;
@@ -30,12 +29,12 @@ background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, F
 }
 
 .banner-text {
-    background-color: black;
     opacity: .8;
     width: 75%;
     margin: auto;
     border-radius: 10px;
 }
+
 
 /* Projects Page */
 .text-bg {
@@ -44,6 +43,10 @@ background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, F
 
 .projects-grid {
     display: flex;
+}
+
+.landing-button {
+    padding: 1px;
 }
 
 
@@ -128,7 +131,7 @@ background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, F
 }
 
 .banner-text hr {
-    border-top:  5px dotted white;
+    border-top:  5px white;
     width: 50%;
     margin: auto;
 }

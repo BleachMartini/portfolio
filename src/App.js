@@ -4,23 +4,32 @@ import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
 import Main from './components/main';
 import { Link } from 'react-router-dom';
  
-function App() {
-  return (
+class App extends Component {
+    hideToggle() {
+        var selectorId = document.querySelector('.mdl-layout');
+        selectorId.MaterialLayout.toggleDrawer();
+    }
+    render() {
+    return (
     <div className="demo-big-content">
     <Layout>
-        <Header className='header-color' title={<Link style={{textDecoration: 'none', color: 'white'}} to="/">MyPortfolio</Link>} scroll>
+        <Header className='header-color' title={<Link style={{textDecoration: 'none', color: 'white'}} to="/"></Link>} scroll>
+            
             <Navigation>
+                
                 <Link to="/resume">Resume</Link>
                 <Link to="/projects">Projects</Link>
                 <Link to="/contact">Contact</Link>
+                
             </Navigation>
+    
         </Header>
-        <Drawer title={<Link style={{textDecoration: 'none', color: 'black'}} to="/">MyPortfolio</Link>}>
+        <Drawer title={<Link style={{textDecoration: 'none', color: 'black'}} to="/">Home</Link>}>
             <Navigation>
-                <Link to="/resume">Resume</Link>
-                <Link to="/projects">Projects</Link>
-                <Link to="/contact">Contact</Link>
-            </Navigation>
+                <Link to="/resume" onClick={() => this.hideToggle()}>Resume</Link>
+                <Link to="/projects" onClick={() => this.hideToggle()}>Projects</Link>
+                <Link to="/contact" onClick={() => this.hideToggle()}>Contact</Link>
+            </Navigation> 
         </Drawer>
         <Content>
             <div className="page-content" />
@@ -30,5 +39,5 @@ function App() {
 </div>
   );
 }
-
+}
 export default App;
